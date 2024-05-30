@@ -10,13 +10,10 @@ const Shop = () => {
         const response = await fetch(
           "https://api.artic.edu/api/v1/products?limit=8"
         );
-        if (!response.ok) {
-          throw new Error(`Error fetching data: ${response.statusText}`);
-        }
-        const jsonData = await response.json();
-        setDataShop(jsonData);
+        const jsonShopData = await response.json();
+        setDataShop(jsonShopData);
       } catch (error) {
-        setError(error.message);
+        setError(error);
       }
     };
 

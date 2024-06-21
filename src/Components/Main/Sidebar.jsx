@@ -1,24 +1,27 @@
-import React, {useState} from 'react';
+
 import { FaSearch } from "react-icons/fa";
-import "./sidebar.css"
-const Sidebar = () => {
-
-  
-
-
-    return (
-        <div >
-        <div >
-            <form>
-                
-            </form>
-          <input type="text" className="search-bar-input" placeholder="Search artworks..." />
-          <button className="search-bar-submit">
-          <FaSearch /> 
+import "./sidebar.css";
+const Sidebar = ({ handleSubmit, handleChange}) => {
+  return (
+    <div>
+      <div>
+        <form  onSubmit={handleSubmit}>
+          <div>
+            <input
+              type="text"
+              className="search-bar-input"
+              placeholder="Search artworks..."
+              required
+              onChange={handleChange}
+            />
+          </div>
+          <button className="search-bar-submit" type="submit">
+            <FaSearch />
           </button>
-        </div>
+        </form>
       </div>
-    );
-}
+    </div>
+  );
+};
 
 export default Sidebar;

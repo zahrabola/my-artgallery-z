@@ -1,0 +1,36 @@
+.quizhome{
+    display: flex; 
+    min-height: 50vh; /* Stretch to full viewport height */
+    background-image: url("https://artic-web.imgix.net/49ad635b-17cb-48ce-9383-a5c282501d9b/exh_abstract-mega-2000.jpg?auto=compress%2Cformat&fit=min&fm=jpg&q=80&rect=%2C%2C%2C"); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+  }
+
+  .QuizHome-Title {
+    flex: 1; 
+    text-align: center;
+    color: white; 
+    font-size: 3rem; 
+    margin: auto 0;
+    line-height: 1.2; 
+  }
+
+  .QuizHome-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white; 
+    padding: 5%;
+    margin: auto; 
+    max-width: 400px; 
+  }
+
+  @media (max-width: 768px) {
+    /* Responsive adjustments for smaller screens */
+    .QuizHome-Title {
+      font-size: 1.5rem;
+      padding: 10px;
+    }
+    .QuizHome-container {
+      padding: 1rem; 
+    }
+  }

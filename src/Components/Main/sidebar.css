@@ -1,0 +1,17 @@
+.sidebar-search-bar {
+    display: flex; /* Allow stacking of toggle and input container */
+    align-items: center;
+    opacity: 0; /* Hide initially */
+  }
+  
+
+  
+  .search-bar-input {
+    padding: 5px 10px;
+    border: 1px solid #ddd; /* Adjust border style as needed */
+    border-radius: 3px; /* Adjust border radius as needed */
+    flex-grow: 1; /* Allow input to fill remaining space */
+  }
+  
+
+  

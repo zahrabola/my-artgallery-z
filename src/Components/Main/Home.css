@@ -1,0 +1,49 @@
+.home {
+    display: flex; 
+    min-height: 50vh; /* Stretch to full viewport height */
+    background-image: url("https://artic-web.imgix.net/c1005a4f-71b3-4dab-9b88-43d4bf3dd07c/14598.jpg?auto=compress%2Cformat&fit=min&fm=jpg&q=80&rect=0%2C87%2C1024%2C576"); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+  }
+
+  .Home-Title {
+    flex: 1; 
+    text-align: center;
+    color: white; 
+    font-size: 3rem; 
+    margin: auto 0;
+    line-height: 1.2; 
+  }
+
+  .Home-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white; 
+    padding: 5%;
+    margin: auto; 
+    max-width: 400px; 
+  }
+  .btnart {
+    color: white;
+    font-weight: bold;
+    margin-right: 10px; 
+
+  }
+
+  .fas.fa-arrow-right {
+    font-size: 16px;
+    color: white;
+  }
+
+ 
+  
+  @media (max-width: 768px) {
+    /* Responsive adjustments for smaller screens */
+    .Home-Title {
+      font-size: 1.5rem;
+      padding: 10px;
+    }
+    .Home-container {
+      padding: 1rem; 
+    }
+  }

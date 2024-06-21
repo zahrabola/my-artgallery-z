@@ -1,12 +1,19 @@
-///import logo from './logo.svg';
-import './App.css';
-import Page from './Components/Pages/Page';
+
+import "./App.css";
+import Gallery from "./Components/Main/Gallery";
+import Page from "./Components/Pages/Page";
+
+import { Routes, Route } from "react-router-dom";
+import QuizGame from "./Components/Quiz/QuizGame";
 
 function App() {
   return (
     <div className="App">
-      <Page />
-     
+      <Routes>
+        <Route path="/" element={<Page />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/quiz" element={<QuizGame/>} />
+      </Routes>
     </div>
   );
 }

@@ -1,29 +1,53 @@
-import React, { useState } from "react";
 import Sidebar from "./Sidebar";
+import React, { useState, useEffect } from 'react';
+
+//https://github.com/luthvirtue/react-airlines-test/blob/master/src/components/SearchBar.js 
+//https://api.artic.edu/api/v1/artworks/search?q=${search}&fields=id,title,image_id,artist_title&limit=30
+//https://api.artic.edu/api/v1/artworks/search?q=${search}&fields=id,api_link,title,image_id,artist_title&limit=30
+
 
 const Gallery = () => {
-  const [searchterm, setSearchTerm] = useState("");
-  const [error, setError] = useState(null)
-  const [loading, setLoading] = useState(false)
+    const [data, setData] = useState([]);
+    const [search, setSearch] = useState();
 
-  fetch("https://api.artic.edu/api/v1/artworks/search?q=monet")
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-    })
-    .catch((error) => {
-      console.error("Error fetching artworks:", error);
-    });
+    useEffect(() => {
+        fetch(`https://api.artic.edu/api/v1/artworks/search?q=${search}&fields=id,api_link,title,image_id,artist_title&limit=30`)
+          .then(response => response.json())
+          .then((response) => {
+            setData(response.data);
+          })
+          .catch(error => console.error(error));
+      }, [search]);
 
-  function handleSubmit(event) {
-    event.preventDefault();
-  }
+      //console.log(data)
+
+      function handleChange(event) {
+        setSearch(event.target.value);
+      }
+    
+      function handleSubmit(event) {
+        event.preventDefault();
+      }
+    
 
   return (
     <div>
       gallery
-      <Sidebar handleSubmit={handleSubmit} />
-      details results
+        <Sidebar handleChange={handleChange} handleSubmit={handleSubmit}/>
+ 
+       {data.length > 0 && (
+        <ul>
+          {data.map((artwork) => (
+            <li key={artwork.id}>
+              {artwork.title} - {artwork.artist_title}
+            </li>
+          ))}
+        </ul>
+      )}
+
+
+
+
     </div>
   );
 };

@@ -1,0 +1,44 @@
+.events-container {
+    padding: 20px; 
+  }
+  
+  .events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust column width as needed */
+    grid-gap: 10px;
+    width: 100%;
+  }
+  
+  .event-card {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    border-radius: 5px; 
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Align content vertically */
+  }
+  
+  .event-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+  }
+  
+  .event-info p {
+   color: rgb(146, 146, 146);
+  }
+  
+  /* Responsive Adjustments (optional) */
+  
+  @media (max-width: 768px) {
+    .events-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust column width for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .events-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust column width for extra small screens */
+    }
+  }

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./Shop.css";
 
 const Shop = () => {
   const [datashop, setDataShop] = useState(null);
@@ -31,22 +32,24 @@ const Shop = () => {
   }
 
   return (
-    <div>
-      <h1>{datashop.info.version}</h1>
-      <p>{datashop.info.license_text}</p>
-      <div className="imggrid">
+    <div className="shop-container">
+      <h1>Shop</h1>
+      
+      {/*<p>Products</p> <h1>{datashop.info.version}</h1>
+    <p>{datashop.info.license_text}</p> */}
+       <hr />
+      <div className="shop-card-scroll">
         {datashop.data.map((shopdata) => (
-          <div key={shopdata.id}>
-             <div>
-
-<h2> {shopdata.title}</h2>
-</div>
-            <img src={shopdata.image_url}  alt={shopdata.api_model}/>
-           
+          <div key={shopdata.id} className="shop-card">
+           <a href={shopdata.web_url}>
+        <img src={shopdata.image_url} alt={shopdata.api_model} />
+        <div className="shop-card-overlay">
+          <h5>{shopdata.title}</h5>
+        </div>
+      </a>
           </div>
         ))}
       </div>
-      Shop
     </div>
   );
 };

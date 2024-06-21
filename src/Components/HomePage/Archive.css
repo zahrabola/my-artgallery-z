@@ -1,0 +1,54 @@
+.archive {
+    /* Styles for the main archive container (optional) */
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ffffff;
+  }
+  
+
+  
+  .archive p {
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+  
+  .archive-card-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 -5px;
+    width: calc(90vw * 4); /* Example: 4 cards per row on most screens */
+  }
+  
+  /* Styles for archive card container (overflow handling and responsiveness) */
+  .archive-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Set container width to 100vw (full viewport width) */
+    width: 95vw;
+    height: auto;
+    overflow-x: scroll;
+    scrollbar-width: thin; 
+    scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0); 
+  }
+  
+  /* Styles for individual archive cards */
+  .archive-card {
+    background-color: #f7f6f659;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+    width: 300px; 
+  }
+  
+  /* Media Queries for Responsiveness (optional) */
+  @media (max-width: 768px) {
+    .archive-card-list {
+      width: calc(300vw * 2); /* Adjust calculation for smaller screens */
+    }
+    .archive-card {
+      width: calc(300vw - 20px); /* Adjust card width for smaller screens */
+    }
+  }

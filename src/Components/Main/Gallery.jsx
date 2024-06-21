@@ -11,7 +11,7 @@ const Gallery = () => {
     const [search, setSearch] = useState();
 
     useEffect(() => {
-        fetch(`https://api.artic.edu/api/v1/artworks/search?q=${search}&fields=id,api_link,title,image_id,artist_title&limit=30`)
+        fetch(`https://api.artic.edu/api/v1/artworks/search?q=${search}&fields=id,api_link,title,image_id,artist_title&limit=60`)
           .then(response => response.json())
           .then((response) => {
             setData(response.data);
@@ -39,7 +39,7 @@ const Gallery = () => {
         <ul>
           {data.map((artwork) => (
             <li key={artwork.id}>
-              {artwork.title} - {artwork.artist_title}
+              {artwork.title} -          {artwork.artist_title} 
             </li>
           ))}
         </ul>

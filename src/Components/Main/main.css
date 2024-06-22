@@ -1,0 +1,41 @@
+.card{
+    width: 100%;
+    position: relative;
+    display: inline-block;
+  }
+  
+.card img{
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  
+.results {
+    max-width: 2000px;
+    margin-top: 5px;
+    margin-left: 275px;
+    margin-right: 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  @media (min-width: 600px) {
+  
+    .results {
+      column-count: 3;
+    }
+  }
+  
+  @media (min-results: 1000px) {
+    .results {
+      column-count: 4;
+    }
+  }
+  
+  @media (min-width: 1400px) {
+    .results {
+      column-count: 5;
+    }
+  }
+  

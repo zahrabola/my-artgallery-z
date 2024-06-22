@@ -8,7 +8,7 @@ import React, { useState, useEffect } from "react";
 
 const Gallery = () => {
 
-{ /* const searchTerms = [
+ const searchTerms = [
     "Modern",
     "Picasso",
     "Contemporary",
@@ -60,10 +60,10 @@ const Gallery = () => {
     "Ceramics",
     "Varnish",
   ];
-  */}
+
  
   const [data, setData] = useState([0]);
-  const [search, setSearch] = useState([]);
+  const [search, setSearch] = useState(searchTerms[0]);
   const [loading, setLoading] = useState(false); 
   const [error, setError] = useState(null);
 

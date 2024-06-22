@@ -70,7 +70,7 @@ const Gallery = () => {
   const [loading, setLoading] = useState(false)
 
   function getResults(search) {
-    const url = `https://api.artic.edu/api/v1/artworks/search?q=${search}&fields=id,title,image_id,artist_title&limit=30`;
+    const url = `https://api.artic.edu/api/v1/artworks/search?q=${search}&fields=id,title,image_id,artist_title&limit=60`;
 console.log(url)
     fetch(url)
       .then((response) => response.json())

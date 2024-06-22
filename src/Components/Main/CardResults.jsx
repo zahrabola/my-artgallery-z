@@ -4,14 +4,12 @@ import "./main.css";
 
 const CardResults = ({ artitem }) => {
   const dummyImageUrl = `https://dummyimage.com/600x400/000/fff&text=No+Image+Available`;
-  
-  const handleImgError = (event) => {
-    event.target.src = dummyImageUrl; 
-  };
-  {/* */}
 
-  
-  
+  const handleImgError = (event) => {
+    event.target.src = dummyImageUrl;
+  };
+ 
+
   return (
     <div className="card">
       {/* 
@@ -26,8 +24,8 @@ const CardResults = ({ artitem }) => {
             ? `https://www.artic.edu/iiif/2/${artitem.image_id}/full/843,/0/default.jpg`
             : dummyImageUrl
         }
-        alt="imagephoto"
-     onError={handleImgError }
+        alt={artitem.title}
+        onError={handleImgError}
       ></img>
       <div className="card-overlay">
         {artitem.title} - {artitem.artist_title}

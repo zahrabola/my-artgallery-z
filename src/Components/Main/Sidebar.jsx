@@ -11,13 +11,17 @@ const Sidebar = ({ handleSubmit, handleChange, }) => {
               type="text"
               className="search-bar-input"
               placeholder="Search artworks..."
+              /* Search artist, keyword, genre, style */
+ 
               required
               onChange={handleChange}
             />
+            <button className="search-bar-submit" >
+               <FaSearch type="submit"/>
+           </button>
+           
           </div>
-          <button className="search-bar-submit" type="submit">
-            <FaSearch />
-          </button>
+       
         </form>
       </div>
     </div>

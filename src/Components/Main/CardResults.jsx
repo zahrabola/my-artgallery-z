@@ -1,5 +1,8 @@
 import React from "react";
 import "./main.css";
+///https://aic-api-react.netlify.app/
+
+
 const CardResults = ({ artitem }) => {
   return (
     <div className="card">

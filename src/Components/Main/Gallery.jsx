@@ -1,15 +1,13 @@
 import SearchResult from "./SearchResult";
 import Sidebar from "./Sidebar";
 import React, { useState, useEffect } from "react";
-
+import Backbtn from "./Backbtn";
 //https://github.com/luthvirtue/react-airlines-test/blob/master/src/components/SearchBar.js
 //https://api.artic.edu/api/v1/artworks/search?q=${search}&fields=id,title,image_id,artist_title&limit=30
 //https://api.artic.edu/api/v1/artworks/search?q=${search}&fields=id,api_link,title,image_id,artist_title&limit=30
 //https://api.artic.edu/api/v1/artworks/search?q=${search}&fields=id,title,image_id,style_id,date_display,artist_title&limit=60
 
-
 const Gallery = () => {
-
   const searchTerms = [
     "Modern",
     "Picasso",
@@ -67,26 +65,23 @@ const Gallery = () => {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
 
-
-
   function getResults(search) {
-    const url = `https://api.artic.edu/api/v1/artworks/search?q=${search}&fields=id,title,image_id,artist_title&limit=30`;
-  
+    const url = `https://api.artic.edu/api/v1/artworks/search?q=${search}&fields=id,title,image_id,artist_title&limit=60`;
+
     fetch(url)
-      .then((response) => response.json()) 
+      .then((response) => response.json())
       .then((response) => {
         // Handle successful response
-        setData(response.data); 
+        setData(response.data);
       })
       .catch((error) => {
         // Handle errors
-        setError(error); 
+        setError(error);
       });
   }
   useEffect(() => {
-    getResults(search); 
+    getResults(search);
   }, [search]);
-
 
   function handleChange(event) {
     setSearch(event.target.value);
@@ -100,14 +95,9 @@ const Gallery = () => {
 
   return (
     <div>
-      gallery
+      <Backbtn />
       {error && <p>Error: {error.message}</p>}
-      <Sidebar
-      handleChange={handleChange}
-      handleSubmit={handleSubmit}
-      
-       
-      />
+      <Sidebar handleChange={handleChange} handleSubmit={handleSubmit} />
       <SearchResult data={data} />
     </div>
   );

@@ -62,8 +62,9 @@ const Gallery = () => {
   ];
 
  
-  const [data, setData] = useState([0]);
-  const [search, setSearch] = useState(searchTerms[0]);
+  const randomIndex = Math.floor(Math.random() * searchTerms.length);
+  const [data, setData] = useState([]);
+  const [search, setSearch] = useState(searchTerms[randomIndex]);
   const [loading, setLoading] = useState(false); 
   const [error, setError] = useState(null);
 
@@ -100,6 +101,14 @@ const Gallery = () => {
 
   function handleSubmit(event) {
     event.preventDefault();
+    getResults(search);
+  }
+
+  function randomize(){
+    console.log("Randomize!")
+    const index = Math.floor(Math.random() * searchTerms.length);
+    var randomTerm = searchTerms[index];
+    setSearch(randomTerm)
     getResults(search);
   }
 

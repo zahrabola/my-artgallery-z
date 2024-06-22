@@ -1,18 +1,18 @@
 
 import { FaSearch } from "react-icons/fa";
 import "./sidebar.css";
-const Sidebar = () => {
+const Sidebar = ({ handleSubmit, handleChange, }) => {
   return (
     <div>
       <div>
-        <form >
+        <form onSubmit={handleSubmit} >
           <div>
             <input
               type="text"
               className="search-bar-input"
               placeholder="Search artworks..."
               required
-           
+              onChange={handleChange}
             />
           </div>
           <button className="search-bar-submit" type="submit">

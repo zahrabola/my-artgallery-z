@@ -103,6 +103,7 @@ const Gallery = () => {
     getResults(search);
   }
 
+
   return (
     <div>
       gallery

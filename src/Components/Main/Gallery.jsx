@@ -61,18 +61,23 @@ const Gallery = () => {
     "Varnish",
   ];
 
+
+  
+
   const [search, setSearch] = useState(searchTerms[0]); // Set initial search term
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false)
 
   function getResults(search) {
-    const url = `https://api.artic.edu/api/v1/artworks/search?q=${search}&fields=id,title,image_id,artist_title&limit=60`;
-
+    const url = `https://api.artic.edu/api/v1/artworks/search?q=${search}&fields=id,title,image_id,artist_title&limit=30`;
+console.log(url)
     fetch(url)
       .then((response) => response.json())
       .then((response) => {
         // Handle successful response
         setData(response.data);
+        setLoading(false)
       })
       .catch((error) => {
         // Handle errors
@@ -89,14 +94,17 @@ const Gallery = () => {
 
   function handleSubmit(event) {
     event.preventDefault();
-
     getResults(search);
   }
+
 
   return (
     <div>
       <Backbtn />
       {error && <p>Error: {error.message}</p>}
+      {loading && (
+        <p>Loading artworks...</p>
+      )}
       <Sidebar handleChange={handleChange} handleSubmit={handleSubmit} />
       <SearchResult data={data} />
     </div>

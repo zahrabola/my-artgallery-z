@@ -8,7 +8,7 @@ import React, { useState, useEffect } from "react";
 
 const Gallery = () => {
 
-  const searchTerms = [
+{ /* const searchTerms = [
     "Modern",
     "Picasso",
     "Contemporary",
@@ -60,7 +60,7 @@ const Gallery = () => {
     "Ceramics",
     "Varnish",
   ];
-  
+  */}
  
   const [data, setData] = useState([0]);
   const [search, setSearch] = useState([]);
@@ -106,6 +106,8 @@ const Gallery = () => {
   return (
     <div>
       gallery
+      {loading && <p>Loading...</p>}
+      {error && <p>Error: {error.message}</p>}
       <Sidebar
         handleChange={handleChange}
         handleSubmit={handleSubmit}

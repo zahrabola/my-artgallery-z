@@ -56,6 +56,7 @@ const QuizGame = () => {
           inputType={dataquestions[currentQuestion].inputType}
           onUserInputChange={setUserInput}
           userInput={userInput}
+          images={dataquestions[currentQuestion].images}
         />
       )}
     </div>

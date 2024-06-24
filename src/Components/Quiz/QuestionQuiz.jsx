@@ -8,6 +8,7 @@ const QuestionQuiz = ({
   inputType = "text",
   userInput = "",
   onUserInputChange,
+  images,
 }) => {
   let quizAnswer;
 
@@ -30,6 +31,19 @@ const QuestionQuiz = ({
           onChange={(event) => onUserInputChange(event.target.value)}
         />
         <button onClick={() => handleAnswer(userInput)}>Submit Answer</button>
+      </div>
+    );
+  } else if (type === "MCQ_EXH") {
+    quizAnswer = (
+      <div>
+       <img src={images} alt="images" />
+       <div>
+          {options.map((option, index) => (
+            <button key={index} onClick={() => handleAnswer(option)}>
+              {option}
+            </button>
+          ))}
+        </div>
       </div>
     );
   }

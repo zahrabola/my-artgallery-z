@@ -5,7 +5,7 @@ import Backbtn from "./Backbtn";
 //https://github.com/luthvirtue/react-airlines-test/blob/master/src/components/SearchBar.js
 //https://api.artic.edu/api/v1/artworks/search?q=${search}&fields=id,title,image_id,artist_title&limit=30
 //https://api.artic.edu/api/v1/artworks/search?q=${search}&fields=id,api_link,title,image_id,artist_title&limit=30
-//https://api.artic.edu/api/v1/artworks/search?q=${search}&fields=id,title,image_id,style_id,date_display,artist_title&limit=60
+//https://api.artic.edu/api/v1/artworks/search?q=${search}&fields=id,title,image_id,style_id,date_display,image_url,artist_title&limit=60
 
 const Gallery = () => {
   const searchTerms = [

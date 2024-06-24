@@ -45,7 +45,7 @@ const mockquizdata =
       date:"1700",
       title:"Moses",
       answer: "Michelangelo",
-      inputType: "text" ``
+      inputType: "text" 
     },
     {
       id:5,

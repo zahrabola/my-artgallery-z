@@ -15,16 +15,21 @@ const QuestionQuiz = ({
   if (type === "MCQ") {
     quizAnswer = (
       <div>
+          <img src={images} alt="images" />
+     
+      <div>
         {options.map((option, index) => (
           <button key={index} onClick={() => handleAnswer(option)}>
             {option}
           </button>
         ))}
       </div>
+      </div>
     );
   } else if (type === "FIB") {
     quizAnswer = (
       <div>
+         <img src={images} alt="images" />
         <input
           type={inputType}
           value={userInput}

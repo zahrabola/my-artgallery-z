@@ -1,32 +1,33 @@
 const mockquizdata = 
 [
     {
-        id:"0",
+        id:0,
       question: "The Art Institute of Chicago, founded in what year?",
       options: [" 1869", " 1879", " 1972", "1878"],
       answer: " 1879",
       type: "MCQ" // Multiple Choice type
     },
     {
-      question: "What does HTML stand for?",
-      options: [
-        "Hyper Text Markup Language",
-        "Hyperlinks and Text Markup Language",
-        "Home Tool Markup Language",
-        "Hyperlinks and Text Management Language"
-      ],
-      answer: "Hyper Text Markup Language",
-      type: "MCQ"
+      id:1,
+      question: "'Nighthawks' is one of the best known works by this American artist",
+      images: "https://www.artic.edu/iiif/2/831a05de-d3f6-f4fa-a460-23008dd58dda/full/843,/0/default.jpg",
+      type: "FIB", // Fill-in-the-Blank type
+      answer: "Edward Hopper",
+      inputType: "text"
     },
     {
+      id:2,
       question:
-        'Which programming language is known as "the mother of all languages"?',
-      options: ["C++", "Java", "Python", "Assembly Language"],
-      answer: "Assembly Language",
+        'What style of painting is Georges Seurat,  "A Sunday Afternoon on la Grande Jatte - 1884"',
+        images: "https://www.artic.edu/iiif/2/2d484387-2509-5e8e-2c43-22f9981972eb/full/843,/0/default.jpg",
+        options: ["Pointillism", "Surrealism", "Dadaism", "Expressionism"],
+      answer: "Pointillism",
       type: "MCQ"
     },
     {
+      id:3,
       question: "What does CSS stand for?",
+      images: "",
       options: [
         "Cascading Style Sheets",
         "Creative Style Sheets",
@@ -37,12 +38,17 @@ const mockquizdata =
       type: "MCQ"
     },
     {
-      question: "______ was a Italian sculptor and painter.",
+      id:4,
+      question: " '______' was a Italian sculptor, architect and painter.",
+      images: "https://www.artic.edu/iiif/2/b47f6d05-5116-d24a-bf81-f92a5ec7c329/full/843,/0/default.jpg",
       type: "FIB", // Fill-in-the-Blank type
+      date:"1700",
+      title:"Moses",
       answer: "Michelangelo",
-      inputType: "text" // Specify input type for user input
+      inputType: "text" ``
     },
     {
+      id:5,
         question: "What is the tile of this Art Exhibition",
         images: "https://artic-web.imgix.net/f248dbc9-ae32-4013-81d5-773f6fc13b7f/1982.1321MakiHakuProportionI.jpg?auto=compress%2Cformat&fit=min&fm=jpg&q=80&rect=91%2C112%2C2767%2C1556",
         date:"1964",
@@ -52,6 +58,7 @@ const mockquizdata =
         type: "MCQ_EXH"  // Multiple Choice Exhibition
       },
       {
+        id:6,
         question: "What Famous artist Painted this Piece of Art Work?",
         images: "https://www.artic.edu/iiif/2/25c31d8d-21a4-9ea1-1d73-6a2eca4dda7e/full/843,/0/default.jpg",
         date:"1889",
@@ -61,6 +68,7 @@ const mockquizdata =
         type: "MCQ_EXH"
       },
     {
+      id:7,
       question: "What year was JavaScript created?",
       options: ["1995", "1999", "2001", "2005"],
       answer: "1995",
@@ -73,42 +81,7 @@ const mockquizdata =
     {
 https://www.sporcle.com/games/MrSaturn64/things-in-the-art-institute-of-chicago - 
     https://www.artic.edu/iiif/2/7690dd6e-05ed-773c-a80e-e7cc4eb879cc/full/843,/0/default.jpg
-        question: "What is the capital of France?",
-        options: ["Paris", "London", "Berlin", "Rome"],
-        answer: "Paris",
-    },
-    {
-        question: "What does HTML stand for?",
-        options: [
-            "Hyper Text Markup Language",
-            "Hyperlinks and Text Markup Language",
-            "Home Tool Markup Language",
-            "Hyperlinks and Text Management Language",
-        ],
-        answer: "Hyper Text Markup Language",
-    },
-    {
-        question:
-            'Which programming language is known as "the mother of all languages"?',
-        options: ["C++", "Java", "Python", "Assembly Language"],
-        answer: "Assembly Language",
-    },
-    {
-        question: "What does CSS stand for?",
-        options: [
-            "Cascading Style Sheets",
-            "Creative Style Sheets",
-            "Computer Style Sheets",
-            "Colorful Style Sheets",
-        ],
-        answer: "Cascading Style Sheets",
-    },
-    {
-        question: "What year was JavaScript created?",
-        options: ["1995", "1999", "2001", "2005"],
-        answer: "1995",
-    },
-];*/
+    */
 
 export default mockquizdata;
 ///https://www.geeksforgeeks.org/quiz-app-in-react-using-chatgpt/ 

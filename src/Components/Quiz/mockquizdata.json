@@ -1,78 +1,39 @@
 
 [
     {
-        "id": 0,
-        "question": "______ provide a way to pass data from one component to another. Fill in the blank.",
-        "type": "FIB",
-        "answer": "props"
-    },
-    {
-        "id": 1,
-        "question": "Which of the following is used in React.js to increase performance?",
-        "choices": [
-            "Virtual DOM",
-            "Original DOM",
-            "Both A and B",
-            "None of the above"
-        ],
-        "type": "MCQs",
-        "answer": "Virtual DOM"
-    },
-    {
-        "id": 2,
-        "question": "What is ReactJS?",
-        "choices": [
-            "Server-side framework",
-            "User Interface framework",
-            "both a and b",
-            "None of the above"
-        ],
-        "type": "MCQs",
-        "answer": "User Interface framework"
-    },
-    {
-        "id": 3,
-        "question": "Identify the one which is used to pass data to components from outside",
-        "choices": [
-            "Render with arguments",
-            "setState",
-            "PropTypes",
-            "props"
-        ],
-        "type": "MCQs",
-        "answer": "props"
-    },
-    {
-        "id": 4,
-        "question": "In which language is React.js written?",
-        "choices": [
-            "Python",
-            "Java",
-            "C#",
-            "JavaScript"
-        ],
-        "type": "MCQs",
-        "answer": "JavaScript"
-    },
-    {
-        "id": 5,
-        "question": "What is Babel?",
-        "choices": [
-            "JavaScript interpreter",
-            "JavaScript transpiler",
-            "JavaScript compiler",
-            "None of the above"
-        ],
-        "type": "MCQs",
-        "answer": "JavaScript compiler"
-    },
-    {
-        "id": 6,
         "question": "What is the capital of France?",
-        "choices": [
-          "Paris", "London", "Berlin", "Rome"
-        ],
-        "type": "MCQs",
+        "options": ["Paris", "London", "Berlin", "Rome"],
         "answer": "Paris"
+    },
+    {
+       "question": "What does HTML stand for?",
+       " options": [
+            "Hyper Text Markup Language",
+            "Hyperlinks and Text Markup Language",
+            "Home Tool Markup Language",
+            "Hyperlinks and Text Management Language"
+        ],
+        "answer": "Hyper Text Markup Language"
+    },
+    {
+       "question":
+            "Which programming language is known as the mother of all languages ?",
+       "options": ["C++", "Java", "Python", "Assembly Language"],
+        "answer": "Assembly Language"
+    },
+    {
+        "question": "What does CSS stand for?",
+        "options": [
+            "Cascading Style Sheets",
+            "Creative Style Sheets",
+            "Computer Style Sheets",
+            "Colorful Style Sheets"
+        ],
+       " answer": "Cascading Style Sheets"
+    },
+    {
+        "question": "What year was JavaScript created?",
+       "options": ["1995", "1999", "2001", "2005"],
+        "answer": "1995"
     }
 ]

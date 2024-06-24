@@ -1,9 +1,16 @@
 import React from 'react';
 
-const QuestionQuiz = ({data}) => {
+const QuestionQuiz = ({question, options, handleAnswer}) => {
     return (
         <div>
-            quiz page 
+         <h2>{question}</h2>
+           <div>
+           {options.map((option, index) => (
+                    <button key={index} onClick={() => handleAnswer(option)}>
+                        {option}
+                    </button>
+                ))}
+           </div>
           
         </div>
     );

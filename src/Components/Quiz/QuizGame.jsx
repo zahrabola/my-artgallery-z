@@ -1,29 +1,40 @@
 import { useState } from "react";
-
-import dataquestions from "./mockquizdata.json"
-import QuestionQuiz from './QuestionQuiz';
+import dataquestions from "./mockquizdata.json";
+import QuestionQuiz from "./QuestionQuiz";
+import Results from "./Results";
 const QuizGame = () => {
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [score, setScore] = useState(0);
+  const [showResult, setShowResult] = useState(false);
 
-    const [currentQuestion, setCurrentQuestion] = useState(0);
-    const [score, setScore] = useState(0);
-    const [showResult, setShowResult] = useState(false);
-
-    const handleAnswer = (selectedOption) => {
-        const correctAnswer = dataquestions[currentQuestion].answer;
-        if (selectedOption === correctAnswer) {
-            setScore(score + 1)
-        }
-
-
+  const handleAnswer = (selectedOption) => {
+    const correctAnswer = dataquestions[currentQuestion].answer;
+    if (selectedOption === correctAnswer) {
+      setScore(score + 1);
     }
 
-    return (
-        <div>
-            quiz home page
+    const nextQuestion = currentQuestion + 1;
+    if (nextQuestion > dataquestions.length) {
+      setCurrentQuestion(nextQuestion);
+    } else {
+      setShowResult(true);
+    }
+  };
 
-           <QuestionQuiz  dataquestions={dataquestions[currentQuestion].question} />
-        </div>
-    );
-}
+  return (
+    <div>
+      quiz home page
+      {showResult ? (
+        <Results />
+      ) : (
+        <QuestionQuiz
+        question={dataquestions[currentQuestion].question}
+          options={dataquestions[currentQuestion].options}
+          handleAnswer={handleAnswer}
+        />
+      )}
+    </div>
+  );
+};
 
 export default QuizGame;

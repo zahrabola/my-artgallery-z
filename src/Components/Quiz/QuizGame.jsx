@@ -89,7 +89,7 @@ const restartGame = () => {
       {showResult ? (
         <Results
          score={score} 
-         totalQuestions={dataquestions}
+         totalQuestions={dataquestions.length}
          restartGame={restartGame}
          />
       ) : (

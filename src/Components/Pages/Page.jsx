@@ -30,6 +30,7 @@ const Page = () => {
         <Scholars />
       </div>
       <div className="pagerow">Tours</div>
+      <div className="pagerow">Tours</div>
     </>
   );
 };

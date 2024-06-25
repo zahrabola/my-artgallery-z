@@ -22,7 +22,7 @@ const QuestionQuiz = ({
 
         <div className="option-container">
           {options.map((option, index) => (
-            <button key={index} onClick={() => handleAnswer(option)}>
+            <button className="quizbtn" key={index} onClick={() => handleAnswer(option)}>
               {option}
             </button>
           ))}
@@ -37,9 +37,10 @@ const QuestionQuiz = ({
           <input
             type={inputType}
             value={userInput}
+            placeholder="artist..."
             onChange={(event) => onUserInputChange(event.target.value)}
           />
-          <button onClick={() => handleAnswer(userInput)}>Submit Answer</button>
+          <button  className="quizbtn" onClick={() => handleAnswer(userInput)}>Submit Answer</button>
         </div>
       </div>
     );
@@ -49,7 +50,7 @@ const QuestionQuiz = ({
         <img src={images} alt="images" />
         <div className="option-container">
           {options.map((option, index) => (
-            <button key={index} onClick={() => handleAnswer(option)}>
+            <button className="quizbtn" key={index} onClick={() => handleAnswer(option)}>
               {option}
             </button>
           ))}

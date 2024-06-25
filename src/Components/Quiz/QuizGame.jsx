@@ -9,7 +9,7 @@ const QuizGame = () => {
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [userInput, setUserInput] = useState("");
-  const [timeleft, setTimeLeft] = useState(60)
+  const [timeleft, setTimeLeft] = useState(90)
   const totalquestion = dataquestions.length
 
 
@@ -26,7 +26,7 @@ useEffect(() => {
     if( nextQuestion < dataquestions.length) {
       setCurrentQuestion(nextQuestion)
       setUserInput("")
-      setTimeLeft(60)
+      setTimeLeft(90)
     }
     else {
       setShowResult(true)
@@ -72,7 +72,12 @@ useEffect(() => {
   };
 
 
-
+const restartGame = () => {
+  setCurrentQuestion(0)
+  setScore(0)
+  setShowResult(false)
+  setTimeLeft(90)
+}
 
 
 
@@ -82,7 +87,11 @@ useEffect(() => {
 
       <div className="game-container">
       {showResult ? (
-        <Results score={score} totalQuestions={dataquestions.length} />
+        <Results
+         score={score} 
+         totalQuestions={dataquestions.length}
+         restartGame={restartGame}
+         />
       ) : (
         <QuestionQuiz
           question={dataquestions[currentQuestion].question}

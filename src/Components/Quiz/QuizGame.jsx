@@ -23,7 +23,7 @@ useEffect(() => {
     }*/
    else{
     const nextQuestion = currentQuestion + 1;
-    if( nextQuestion < dataquestions) {
+    if( nextQuestion < dataquestions.length) {
       setCurrentQuestion(nextQuestion)
       setUserInput("")
       setTimeLeft(90)
@@ -34,7 +34,7 @@ useEffect(() => {
    }
   }, 1000)
   return () => clearTimeout(timer)
-}, [timeleft, currentQuestion])
+}, [timeleft, currentQuestion, ])
 
 
 

@@ -18,12 +18,23 @@ useEffect(() => {
   const timer = setTimeout(() => {
     if (timeleft > 0 ) {
       setTimeLeft(timeleft - 1 )
-    } else {
+    } /*else {
+      setShowResult(true)
+    }*/
+   else{
+    const nextQuestion = currentQuestion + 1;
+    if( nextQuestion < dataquestions.length) {
+      setCurrentQuestion(nextQuestion)
+      setUserInput("")
+      setTimeLeft(60)
+    }
+    else {
       setShowResult(true)
     }
+   }
   }, 1000)
   return () => clearTimeout(timer)
-}, [timeleft])
+}, [timeleft, currentQuestion, dataquestions.length])
 
 
 

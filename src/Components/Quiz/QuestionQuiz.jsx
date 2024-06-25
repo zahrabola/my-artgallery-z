@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./game.css";
 const QuestionQuiz = ({
   question,
   options,
@@ -9,40 +9,45 @@ const QuestionQuiz = ({
   userInput = "",
   onUserInputChange,
   images,
+  timeleft,
+  currentQuestion,
+  totalquestion
 }) => {
-  let quizAnswer;
+  let quizQuestions;
 
   if (type === "MCQ") {
-    quizAnswer = (
-      <div>
-          <img src={images} alt="images" />
-     
-      <div>
-        {options.map((option, index) => (
-          <button key={index} onClick={() => handleAnswer(option)}>
-            {option}
-          </button>
-        ))}
-      </div>
+    quizQuestions = (
+      <div className="image-container">
+        <img src={images} alt="images" />
+
+        <div className="option-container">
+          {options.map((option, index) => (
+            <button key={index} onClick={() => handleAnswer(option)}>
+              {option}
+            </button>
+          ))}
+        </div>
       </div>
     );
   } else if (type === "FIB") {
-    quizAnswer = (
-      <div>
-         <img src={images} alt="images" />
-        <input
-          type={inputType}
-          value={userInput}
-          onChange={(event) => onUserInputChange(event.target.value)}
-        />
-        <button onClick={() => handleAnswer(userInput)}>Submit Answer</button>
+    quizQuestions = (
+      <div className="image-container">
+        <img src={images} alt="images" />
+        <div>
+          <input
+            type={inputType}
+            value={userInput}
+            onChange={(event) => onUserInputChange(event.target.value)}
+          />
+          <button onClick={() => handleAnswer(userInput)}>Submit Answer</button>
+        </div>
       </div>
     );
   } else if (type === "MCQ_EXH") {
-    quizAnswer = (
-      <div>
-       <img src={images} alt="images" />
-       <div>
+    quizQuestions = (
+      <div className="image-container">
+        <img src={images} alt="images" />
+        <div className="option-container">
           {options.map((option, index) => (
             <button key={index} onClick={() => handleAnswer(option)}>
               {option}
@@ -54,9 +59,16 @@ const QuestionQuiz = ({
   }
 
   return (
-    <div>
-      <h2>{question}</h2>
-      <div>{quizAnswer}</div>
+    <div className="quiz-container">
+      <div className="timer">Time Left: {timeleft} seconds</div>
+      <div className="question-number">
+                        Question {currentQuestion + 1}/
+                        {totalquestion}
+                    </div>
+      <div className="question">
+        <h2>{question}</h2>
+      </div>
+      <div>{quizQuestions}</div>
       {/*<div>
         {options.map((option, index) => (
           <button key={index} onClick={() => handleAnswer(option)}>

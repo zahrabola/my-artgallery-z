@@ -3,6 +3,7 @@ const mockquizdata =
     {
         id:0,
       question: "The Art Institute of Chicago, founded in what year?",
+      images: "https://artic-web.imgix.net/95d79296-42be-46ac-a594-fa7964f18447/logo_forvideocloseup.allred.jpg?rect=0%2C0%2C7257%2C7257&auto=format%2Ccompress&q=80&fit=crop&crop=faces%2Ccenter&w=800&h=800",
       options: [" 1869", " 1879", " 1972", "1878"],
       answer: " 1879",
       type: "MCQ" // Multiple Choice type

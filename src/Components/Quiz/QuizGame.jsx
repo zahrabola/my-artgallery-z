@@ -1,13 +1,31 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import dataquestions from "./mockquizdata";
 import QuestionQuiz from "./QuestionQuiz";
 import Results from "./Results";
 import Backbtn from "../Main/Backbtn";
+import "./game.css"
 const QuizGame = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [userInput, setUserInput] = useState("");
+  const [timeleft, setTimeLeft] = useState(60)
+  const totalquestion = dataquestions.length
+
+
+  //timer 
+useEffect(() => {
+  const timer = setTimeout(() => {
+    if (timeleft > 0 ) {
+      setTimeLeft(timeleft - 1 )
+    } else {
+      setShowResult(true)
+    }
+  }, 1000)
+  return () => clearTimeout(timer)
+}, [timeleft])
+
+
 
   const handleAnswer = (selectedOption) => {
     const currentQuestionData = dataquestions[currentQuestion];
@@ -42,9 +60,16 @@ const QuizGame = () => {
     return userInput.toLowerCase() === correctAnswer.toLowerCase();
   };
 
+
+
+
+
+
   return (
     <div>
-           <Backbtn />
+       <Backbtn />
+
+      <div className="game-container">
       {showResult ? (
         <Results score={score} totalQuestions={dataquestions.length} />
       ) : (
@@ -57,8 +82,12 @@ const QuizGame = () => {
           onUserInputChange={setUserInput}
           userInput={userInput}
           images={dataquestions[currentQuestion].images}
+          timeleft={timeleft}
+          currentQuestion={currentQuestion}
+          totalquestion={totalquestion}
         />
       )}
+      </div>
     </div>
   );
 };

@@ -23,7 +23,7 @@ const QuizHome = () => {
           }
             <Link
           to="/quiz"
-          className="aquizGameBtn"
+          className="quizGameBtn"
           style={{ textDecoration: "none" }}
         >
           <div className="btnquiz">Quiz Game &rarr; </div>

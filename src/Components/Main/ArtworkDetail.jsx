@@ -1,12 +1,11 @@
-
 //https://api.artic.edu/api/v1/artworks/${id}
 ///artworks/{id}
 
-
 import { useEffect, useState } from "react";
-
+import "./main.css";
 import { useParams } from "react-router-dom";
-import DetailBackBtn  from "./DetailBackBtn"
+import DetailBackBtn from "./DetailBackBtn";
+
 const ArtworkDeatil = () => {
   const { id } = useParams();
   const [artworkData, setArtworkData] = useState(null); // State to store artwork details
@@ -16,7 +15,7 @@ const ArtworkDeatil = () => {
     if (!id) return;
 
     const fetchArtworkDetails = async () => {
-      const url = `https://api.artic.edu/api/v1/artworks/${id}?fields=id,title,artist_title,classification_title,date_display,artist_display,place_of_origin,dimensions_detail,dimensions,medium_display,category_titles,image_id`;
+      const url = `https://api.artic.edu/api/v1/artworks/${id}?fields=id,title,artist_title,classification_title,date_display,artist_display,place_of_origin,dimensions_detail,dimensions,medium_display,category_titles,artist_display,department_title,image_id`;
       console.log(url);
       try {
         const response = await fetch(url);
@@ -41,28 +40,63 @@ const ArtworkDeatil = () => {
     return <p>Loading artwork details...</p>;
   }
   return (
-    <div className="artwork-detail">
-        {console.log(artworkData)}
+    <div className="artwork-container">
+      {console.log(artworkData)}
       <DetailBackBtn />
       <div className="artwork-detail">
-      
         <h2>{artworkData.data.title}</h2>
         <img
           src={`https://www.artic.edu/iiif/2/${artworkData.data.image_id}/full/843,/0/default.jpg`}
           alt={artworkData.data.title}
           className="descriptionImage"
         ></img>
-        {/* Display image */}
-        <p>Artist: {artworkData.data.artist_title}</p>
-        <p>Date: {artworkData.data.date_display}</p>
-        <p>Artsist Info: {artworkData.data.artist_display}</p>
-        <p>Location: {artworkData.data.place_of_origin}</p>
-        <p>Classification: {artworkData.data.classification_title}</p>
-        <p>Medium: {artworkData.data.medium_display}</p>
-        <p>Category: {artworkData.data.category_titles}</p>
-        <p>Dimension: {artworkData.data.dimensions} </p>
-        {/* specific dimensions   H - {artworkData.data.dimensions_detail[0].height} - array */}
+    
+        <div className="artwork-info">
+          <p>
+            <span>Artist:</span> {artworkData.data.artist_title}
+          </p>
+          <hr />
+          <p>
+            <span> Artist Information: </span> {artworkData.data.artist_display}
+          </p>
+          <hr />
+          <p>
+            <span>Place:</span> {artworkData.data.place_of_origin}
+          </p>
+          <hr />
+          <p>
+            {" "}
+            <span>Date:</span> {artworkData.data.date_display}
+          </p>
+          <hr />
+          <p>
+            <span>Department: </span>
+            {artworkData.data.department_title}
+          </p>
+          <hr />
+          <p>
+            <span>Classification:</span> {artworkData.data.classification_title}
+          </p>
+          <hr />
+          <p>
+            {" "}
+            <span>Medium:</span> {artworkData.data.medium_display}
+          </p>
+
+          <hr />
+          <p>
+            <span> Category: </span>
+            {artworkData.data.category_titles[0]}
+          </p>
+          <hr />
+          <p><span>Dimension:</span> {artworkData.data.dimensions} </p>
+          {/* specific dimensions   H - {artworkData.data.dimensions_detail[0].height} - array */}
+        </div>
       </div>
+{/*<div className="favourites">
+      <div>recently viewed </div>
+      </div> */}
+      
     </div>
   );
 };

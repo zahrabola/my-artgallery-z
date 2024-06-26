@@ -2,7 +2,8 @@ import SearchResult from "./SearchResult";
 import Sidebar from "./Sidebar";
 import React, { useState, useEffect } from "react";
 import Backbtn from "./Backbtn";
-import ArtworkDeatil from "./ArtworkDetail";
+
+///import ArtworkDeatil from "./ArtworkDetail";
 //https://github.com/luthvirtue/react-airlines-test/blob/master/src/components/SearchBar.js
 //https://api.artic.edu/api/v1/artworks/search?q=${search}&fields=id,title,image_id,artist_title&limit=30
 //https://api.artic.edu/api/v1/artworks/search?q=${search}&fields=id,api_link,title,image_id,artist_title&limit=30
@@ -99,6 +100,9 @@ console.log(url)
   }
 
 
+  
+
+  
   return (
     <div>
       <Backbtn />
@@ -106,9 +110,13 @@ console.log(url)
       {loading && (
         <p>Loading artworks...</p>
       )}
-      <Sidebar handleChange={handleChange} handleSubmit={handleSubmit} />
-      <SearchResult data={data} />
-  <ArtworkDeatil />
+
+
+      <Sidebar handleChange={handleChange} handleSubmit={handleSubmit}  />
+    
+      <SearchResult 
+      data={data} />
+    
     </div>
   );
 };

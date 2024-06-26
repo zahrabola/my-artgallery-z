@@ -2,6 +2,10 @@
 import { FaSearch } from "react-icons/fa";
 import "./sidebar.css";
 const Sidebar = ({ handleSubmit, handleChange, }) => {
+
+
+
+
   return (
     <div>
       <div>
@@ -23,6 +27,9 @@ const Sidebar = ({ handleSubmit, handleChange, }) => {
           </div>
        
         </form>
+
+      
+        
       </div>
     </div>
   );

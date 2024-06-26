@@ -28,7 +28,7 @@ const CardResults = ({ artitem }) => {
         onError={handleImgError}
       ></img>
       <div className="card-overlay">
-        {artitem.title} - {artitem.artist_title}
+      <p className="overlaytext">  {artitem.title} - {artitem.artist_title}</p>
       </div>
   
          

@@ -9,7 +9,7 @@ const Shop = () => {
     const fetchShopData = async () => {
       try {
         const response = await fetch(
-          "https://api.artic.edu/api/v1/products?limit=8"
+          "https://api.artic.edu/api/v1/products?limit=9"
         );
         const jsonShopData = await response.json();
         setDataShop(jsonShopData);

@@ -27,7 +27,7 @@ const Events = () => {
   }
 
   if (!eventshop) {
-    return <div>Loading Shop Information .... </div>;
+    return <div>Loading Event Information .... </div>;
   }
   return (
     <div className="events-container">

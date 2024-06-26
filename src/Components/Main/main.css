@@ -6,7 +6,7 @@
   
 .card img{
     width: 100%;
-    margin-bottom: 5px;
+    
   }
 
   .card-overlay {
@@ -30,7 +30,9 @@
     opacity: 1; 
   }
 
-  
+  .overlaytext{
+    padding: 5px;
+  }
 .results {
     max-width: 2000px;
     margin-top: 5px;
@@ -81,12 +83,6 @@
 
 
 
-
-
-
-
-
-
   .artwork-detail {
     display: flex;
     flex-direction: column;
@@ -95,7 +91,7 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f5f5f5;
+    background-color: #fdfbfb;
   }
 
 .artwork-detail h2 {

@@ -14,7 +14,7 @@ function App() {
         <Route path="/" element={<Page />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/quiz" element={<QuizGame/>} />
-        <Route path="/gallery/artworks/:id" element={<  ArtworkDeatil />} />
+        <Route path="/gallery/:id" element={<  ArtworkDeatil />} />
 
      
       </Routes>

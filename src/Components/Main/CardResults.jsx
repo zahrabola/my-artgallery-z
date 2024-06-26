@@ -30,6 +30,9 @@ const CardResults = ({ artitem }) => {
       <div className="card-overlay">
         {artitem.title} - {artitem.artist_title}
       </div>
+  
+         
+
     </div>
   );
 };

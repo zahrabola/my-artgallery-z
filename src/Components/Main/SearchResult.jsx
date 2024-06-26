@@ -2,7 +2,6 @@ import React from 'react';
 import CardResults from './CardResults';
 import "./main.css"
 import { Link } from 'react-router-dom';
-
 const SearchResult = ({data}) => {
 
     if (!data.length) {
@@ -11,7 +10,7 @@ const SearchResult = ({data}) => {
     return (
         <div className='results'>
           {data.map((artitem, i) => (
-            <Link to={`artworks/${artitem.id}`} className='id' key={i}>
+            <Link to={`${artitem.id}`} className='id' key={i}>
              <div >
             <CardResults artitem={artitem} />
             </div>

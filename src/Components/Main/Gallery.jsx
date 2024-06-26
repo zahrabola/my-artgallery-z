@@ -2,6 +2,7 @@ import SearchResult from "./SearchResult";
 import Sidebar from "./Sidebar";
 import React, { useState, useEffect } from "react";
 import Backbtn from "./Backbtn";
+import ArtworkDeatil from "./ArtworkDetail";
 //https://github.com/luthvirtue/react-airlines-test/blob/master/src/components/SearchBar.js
 //https://api.artic.edu/api/v1/artworks/search?q=${search}&fields=id,title,image_id,artist_title&limit=30
 //https://api.artic.edu/api/v1/artworks/search?q=${search}&fields=id,api_link,title,image_id,artist_title&limit=30
@@ -63,11 +64,11 @@ const Gallery = () => {
 
 
   
-
   const [search, setSearch] = useState(searchTerms[0]); // Set initial search term
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false)
+
 
   function getResults(search) {
     const url = `https://api.artic.edu/api/v1/artworks/search?q=${search}&fields=id,title,image_id,artist_title&limit=60`;
@@ -107,6 +108,7 @@ console.log(url)
       )}
       <Sidebar handleChange={handleChange} handleSubmit={handleSubmit} />
       <SearchResult data={data} />
+  <ArtworkDeatil />
     </div>
   );
 };

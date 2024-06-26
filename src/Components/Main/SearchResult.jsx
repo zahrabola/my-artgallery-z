@@ -1,6 +1,7 @@
 import React from 'react';
 import CardResults from './CardResults';
 import "./main.css"
+import { Link } from 'react-router-dom';
 
 const SearchResult = ({data}) => {
 
@@ -10,9 +11,12 @@ const SearchResult = ({data}) => {
     return (
         <div className='results'>
           {data.map((artitem, i) => (
-            <div key={i}>
+            <Link to={`artworks/${artitem.id}`} className='id' key={i}>
+             <div >
             <CardResults artitem={artitem} />
             </div>
+            </Link>
+           
           ))}
         </div>
     );

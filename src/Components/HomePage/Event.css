@@ -16,7 +16,7 @@
     padding: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Align content vertically */
+    justify-content: space-between; 
   }
   
   .event-card img {
@@ -29,7 +29,6 @@
    color: rgb(146, 146, 146);
   }
   
-  /* Responsive Adjustments (optional) */
   
   @media (max-width: 768px) {
     .events-grid {

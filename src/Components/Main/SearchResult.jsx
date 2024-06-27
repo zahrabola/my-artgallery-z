@@ -20,15 +20,4 @@ const SearchResult = ({ data }) => {
 };
 
 export default SearchResult;
-/*   <div>
-            <button
-              className={`favourite-button ${isFavourited(artitem.id) ? 'active' : ''}`}
-              onClick={() => {
-                isFavourited(artitem.id)
-                  ? removeFromFavourites(artitem.id)
-                  : addToFavourites(artitem.id);
-              }}
-            >
-              {isFavourited(artitem.id) ? 'Remove from Favourites' : 'Add to Favourites'}
-            </button>
-            </div> */
+

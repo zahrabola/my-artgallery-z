@@ -82,7 +82,6 @@ console.log(url)
         setLoading(false)
       })
       .catch((error) => {
-        // Handle errors
         setError(error);
       });
   }

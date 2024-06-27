@@ -8,8 +8,8 @@ import DetailBackBtn from "./DetailBackBtn";
 
 const ArtworkDeatil = () => {
   const { id } = useParams();
-  const [artworkData, setArtworkData] = useState(null); // State to store artwork details
-  const [error, setError] = useState(null); // State to store errors
+  const [artworkData, setArtworkData] = useState(null); 
+  const [error, setError] = useState(null); 
 
   useEffect(() => {
     if (!id) return;

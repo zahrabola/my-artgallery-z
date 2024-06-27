@@ -1,13 +1,13 @@
-.quizhome{
+.exhibit{
     display: flex; 
     min-height: 50vh; /* Stretch to full viewport height */
-    background-image: url("https://artic-web.imgix.net/49ad635b-17cb-48ce-9383-a5c282501d9b/exh_abstract-mega-2000.jpg?auto=compress%2Cformat&fit=min&fm=jpg&q=80&rect=%2C%2C%2C"); 
+    background-image: url("https://artic-web.imgix.net/d2a7f2a6-c365-4277-ab52-5147e20f8983/exh_3-Puryear_Face-Down_2008_mega_2000.jpg?auto=compress%2Cformat&fit=min&fm=jpg&q=80&rect=%2C%2C%2C"); 
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
   }
 
-  .QuizHome-Title {
+  .exhibit-title {
     flex: 1; 
     text-align: center;
     color: white; 
@@ -16,29 +16,32 @@
     line-height: 1.2; 
   }
 
-  .QuizHome-container {
+  .exhibit-container {
     background-color: rgba(0, 0, 0, 0.5);
     color: white; 
     padding: 5%;
     margin: auto; 
     max-width: 400px; 
   }
-
-
-  .btnquiz {
+  .btnart {
     color: white;
     font-weight: bold;
     margin-right: 10px; 
 
   }
 
+  .link-exhibit:hover{
+    text-decoration: none;
+  }
+ 
+  
   @media (max-width: 768px) {
-
-    .QuizHome-Title {
+  
+    .echibit-Title {
       font-size: 1.5rem;
       padding: 10px;
     }
-    .QuizHome-container {
+    .exhibit-container {
       padding: 1rem; 
     }
   }

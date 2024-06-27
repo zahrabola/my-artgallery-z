@@ -1,6 +1,6 @@
 .home {
     display: flex; 
-    min-height: 50vh; /* Stretch to full viewport height */
+    min-height: 50vh; 
     background-image: url("https://artic-web.imgix.net/c1005a4f-71b3-4dab-9b88-43d4bf3dd07c/14598.jpg?auto=compress%2Cformat&fit=min&fm=jpg&q=80&rect=0%2C87%2C1024%2C576"); 
     background-size: cover; 
     background-repeat: no-repeat; 
@@ -30,10 +30,6 @@
 
   }
 
-  .fas.fa-arrow-right {
-    font-size: 16px;
-    color: white;
-  }
 
  
   

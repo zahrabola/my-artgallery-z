@@ -5,6 +5,7 @@ import Scholars from "../HomePage/Scholars";
 import Events from "../HomePage/Events";
 import Home from "../Main/Home";
 import QuizHome from "../Quiz/QuizHome";
+import Exhibition from "../HomePage/Exhibition";
 
 const Page = () => {
   return (
@@ -28,12 +29,10 @@ const Page = () => {
       </div>
       <div className="pagerow">
         <Scholars />
-      </div> 
-      <div className="pagerow">Exhbition</div> 
-   
-     
-      
- 
+      </div>
+      <div className="pagerow">
+        <Exhibition />
+      </div>
     </>
   );
 };

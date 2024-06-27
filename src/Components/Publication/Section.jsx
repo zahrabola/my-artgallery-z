@@ -49,7 +49,6 @@ const Section = () => {
     return (
       <div className="card">
         <span>Sections</span>
-      { /* <h5>{datapublication.info.version}</h5> */}
         {randomSections?.map((sections) => (
           <div key={sections.id}>
               <div className="card-body">

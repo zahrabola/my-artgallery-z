@@ -102,6 +102,8 @@ const restartGame = () => {
           onUserInputChange={setUserInput}
           userInput={userInput}
           images={dataquestions[currentQuestion].images}
+          title={dataquestions[currentQuestion].title}
+          date={dataquestions[currentQuestion].date}
           timeleft={timeleft}
           currentQuestion={currentQuestion}
           totalquestion={totalquestion}

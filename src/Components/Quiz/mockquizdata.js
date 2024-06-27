@@ -5,7 +5,7 @@ const mockquizdata =
       question: "The Art Institute of Chicago, founded in what year?",
       images: "https://artic-web.imgix.net/95d79296-42be-46ac-a594-fa7964f18447/logo_forvideocloseup.allred.jpg?rect=0%2C0%2C7257%2C7257&auto=format%2Ccompress&q=80&fit=crop&crop=faces%2Ccenter&w=800&h=800",
       options: [" 1869", " 1879", " 1972", "1878"],
-      answer: " 1879",
+      answer: "1879",
       type: "MCQ" // Multiple Choice type
     },
     {
@@ -27,15 +27,15 @@ const mockquizdata =
     },
     {
       id:3,
-      question: "What does CSS stand for?",
-      images: "",
+      question: "his 11th century sculpture depicts this Hindu deity",
+      images: "https://www.artic.edu/iiif/2/cf50f037-5fb2-e197-0e56-3ae701edb3e2/full/843,/0/default.jpg",
       options: [
-        "Cascading Style Sheets",
-        "Creative Style Sheets",
-        "Computer Style Sheets",
-        "Colorful Style Sheets"
+        "Swahili",
+        "Edo",
+        "Shiva",
+        "Yakshi"
       ],
-      answer: "Cascading Style Sheets",
+      answer: "Shiva",
       type: "MCQ"
     },
     {
@@ -43,7 +43,6 @@ const mockquizdata =
       question: " '______' was a Italian sculptor, architect and painter.",
       images: "https://www.artic.edu/iiif/2/b47f6d05-5116-d24a-bf81-f92a5ec7c329/full/843,/0/default.jpg",
       type: "FIB", // Fill-in-the-Blank type
-      date:"1700",
       title:"Moses",
       answer: "Michelangelo",
       inputType: "text" 
@@ -70,11 +69,30 @@ const mockquizdata =
       },
     {
       id:7,
-      question: "What year was JavaScript created?",
-      options: ["1995", "1999", "2001", "2005"],
-      answer: "1995",
+      question: "This iconic painting by Grant Wood is one of the most famous works of American Art",
+      images: "https://artic-web.imgix.net/1801558c-353e-49c1-acec-d771b95ce3d2/AmericanGothic2022.jpeg?rect=0%2C0%2C843%2C1019&auto=format%2Ccompress&q=80&fit=crop&crop=faces%2Ccenter&w=1000&h=1209",
+      options: ["American Gothic", "Weaving", "Nightlight", "Untitled"],
+      answer: "American Gothic",
       type: "MCQ"
-    }
+    },
+    {
+      id:8,
+      question: "The Roman collection includes the bust of emperor '______', who reigned from 117-138.",
+      images: "https://www.artic.edu/iiif/2/4ba54d83-416b-92bf-6098-89ffec76a496/full/843,/0/default.jpg",
+      type: "FIB", // Fill-in-the-Blank type
+      answer: "Hadrian",
+      inputType: "text" 
+    },
+    {
+      id:9,
+      question: "This work by Gustave Caillebotte portrays a street scene of this European capital",
+      images: "https://www.artic.edu/iiif/2/f8fd76e9-c396-5678-36ed-6a348c904d27/full/843,/0/default.jpg",
+      date:"1877",
+      title:"Rainy Day",
+      options: ["London", "Paris", "Venice", "Vienna"],
+      answer: "Paris",
+      type: "MCQ_EXH"
+    },
   ]
   
 

@@ -8,8 +8,14 @@ import DetailBackBtn from "./DetailBackBtn";
 
 const ArtworkDeatil = () => {
   const { id } = useParams();
-  const [artworkData, setArtworkData] = useState(null); 
-  const [error, setError] = useState(null); 
+  const [artworkData, setArtworkData] = useState(null);
+  const [error, setError] = useState(null);
+
+  const dummyImageUrl = `https://lh3.googleusercontent.com/ci/AL18g_QgKwWYiYGeRxuLUWjnR5tRizbeYNmwX3VMls2WSkleZDnDXWxCrk1Rj4zVkHty7RZpXTouOE8`;
+
+  const handleImgError = (event) => {
+    event.target.src = dummyImageUrl;
+  };
 
   useEffect(() => {
     if (!id) return;
@@ -45,12 +51,18 @@ const ArtworkDeatil = () => {
       <DetailBackBtn />
       <div className="artwork-detail">
         <h2>{artworkData.data.title}</h2>
+
         <img
-          src={`https://www.artic.edu/iiif/2/${artworkData.data.image_id}/full/843,/0/default.jpg`}
+          src={
+            artworkData.data.image_id
+              ? `https://www.artic.edu/iiif/2/${artworkData.data.image_id}/full/843,/0/default.jpg`
+              : dummyImageUrl
+          }
           alt={artworkData.data.title}
           className="descriptionImage"
+          onError={handleImgError}
         ></img>
-    
+
         <div className="artwork-info">
           <p>
             <span>Artist:</span> {artworkData.data.artist_title}
@@ -89,14 +101,15 @@ const ArtworkDeatil = () => {
             {artworkData.data.category_titles[0]}
           </p>
           <hr />
-          <p><span>Dimension:</span> {artworkData.data.dimensions} </p>
+          <p>
+            <span>Dimension:</span> {artworkData.data.dimensions}{" "}
+          </p>
           {/* specific dimensions   H - {artworkData.data.dimensions_detail[0].height} - array */}
         </div>
       </div>
-{/*<div className="favourites">
+      {/*<div className="favourites">
       <div>recently viewed </div>
       </div> */}
-      
     </div>
   );
 };

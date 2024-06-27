@@ -11,7 +11,9 @@ const QuestionQuiz = ({
   images,
   timeleft,
   currentQuestion,
-  totalquestion
+  totalquestion,
+  title,
+  date,
 }) => {
   let quizQuestions;
 
@@ -22,7 +24,11 @@ const QuestionQuiz = ({
 
         <div className="option-container">
           {options.map((option, index) => (
-            <button className="quizbtn" key={index} onClick={() => handleAnswer(option)}>
+            <button
+              className="quizbtn"
+              key={index}
+              onClick={() => handleAnswer(option)}
+            >
               {option}
             </button>
           ))}
@@ -40,7 +46,9 @@ const QuestionQuiz = ({
             placeholder="artist..."
             onChange={(event) => onUserInputChange(event.target.value)}
           />
-          <button  className="quizbtn" onClick={() => handleAnswer(userInput)}>Submit Answer</button>
+          <button className="quizbtn" onClick={() => handleAnswer(userInput)}>
+            Submit Answer
+          </button>
         </div>
       </div>
     );
@@ -48,9 +56,14 @@ const QuestionQuiz = ({
     quizQuestions = (
       <div className="image-container">
         <img src={images} alt="images" />
+        <span> {title}</span> | <span>{date}</span>
         <div className="option-container">
           {options.map((option, index) => (
-            <button className="quizbtn" key={index} onClick={() => handleAnswer(option)}>
+            <button
+              className="quizbtn"
+              key={index}
+              onClick={() => handleAnswer(option)}
+            >
               {option}
             </button>
           ))}
@@ -63,9 +76,8 @@ const QuestionQuiz = ({
     <div className="quiz-container">
       <div className="timer">Time Left: {timeleft} seconds</div>
       <div className="question-number">
-                        Question {currentQuestion + 1}/
-                        {totalquestion}
-                    </div>
+        Question {currentQuestion + 1}/{totalquestion}
+      </div>
       <div className="question">
         <h2>{question}</h2>
       </div>

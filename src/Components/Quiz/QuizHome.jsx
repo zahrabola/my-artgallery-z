@@ -13,7 +13,7 @@ const QuizHome = () => {
           Art Game
         </h1>
         <div className="QuizHome-container">
-          <p>Welcome to <span>Quiz Art Gam   </span></p>
+          <p>Welcome to <span>Quiz Art Game   </span></p>
           {/*<p>Use the search bar to start finding artworks to view. </p>
           <p>Click on an artwork to learn more.</p>
            <Link

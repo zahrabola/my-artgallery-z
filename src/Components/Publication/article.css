@@ -1,0 +1,36 @@
+.scholars {
+  margin: 20px;
+  padding: 10px;
+  flex-direction: column;
+}
+
+
+.publications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* publication */
+.card {
+  background-color: #f7f6f659;
+  border-radius: 5px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  padding: 5px; 
+  margin-bottom: 20px; 
+}
+
+
+.card-body {
+  padding: 10px; 
+  border-bottom: 1px solid #ddd; 
+}
+.card span {
+  font-weight: bold; 
+  margin-bottom: 5px; 
+  display: block; 
+}
+
+.card h5 {
+  margin-bottom: 5px; 
+}

@@ -28,13 +28,12 @@ const Page = () => {
       </div>
       <div className="pagerow">
         <Scholars />
-      </div> <div className="pagerow">Tours</div> 
+      </div> 
+      <div className="pagerow">Exhbition</div> 
    
      
       
-     {/*  <div className="pagerow">
-        <Scholars />
-      </div> <div className="pagerow">Tours</div> */}
+ 
     </>
   );
 };

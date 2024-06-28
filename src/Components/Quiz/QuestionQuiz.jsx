@@ -21,7 +21,7 @@ const QuestionQuiz = ({
     quizQuestions = (
       <div className="image-container">
         <img src={images} alt="images" />
-
+        <span> {title}</span> <span>{date}</span>
         <div className="option-container">
           {options.map((option, index) => (
             <button
@@ -52,25 +52,7 @@ const QuestionQuiz = ({
         </div>
       </div>
     );
-  } else if (type === "MCQ_EXH") {
-    quizQuestions = (
-      <div className="image-container">
-        <img src={images} alt="images" />
-        <span> {title}</span> | <span>{date}</span>
-        <div className="option-container">
-          {options.map((option, index) => (
-            <button
-              className="quizbtn"
-              key={index}
-              onClick={() => handleAnswer(option)}
-            >
-              {option}
-            </button>
-          ))}
-        </div>
-      </div>
-    );
-  }
+  } 
 
   return (
     <div className="quiz-container">

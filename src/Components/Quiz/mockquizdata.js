@@ -4,7 +4,7 @@ const mockquizdata =
         id:0,
       question: "The Art Institute of Chicago, founded in what year?",
       images: "https://artic-web.imgix.net/95d79296-42be-46ac-a594-fa7964f18447/logo_forvideocloseup.allred.jpg?rect=0%2C0%2C7257%2C7257&auto=format%2Ccompress&q=80&fit=crop&crop=faces%2Ccenter&w=800&h=800",
-      options: [" 1869", " 1879", " 1972", "1878"],
+      options: [" 1869", "1879", " 1972", "1878"],
       answer: "1879",
       type: "MCQ" // Multiple Choice type
     },
@@ -55,7 +55,7 @@ const mockquizdata =
         title:"Proportion I",
         options: ["Van Gogh", "Ink on Paper: Japanese Monochromatic Prints (2009)", "Ragnar Kjartansson / The National: A Lot of Sorrow", "Van Dyck, Rembrandt, and the Portrait Print"],
         answer: "Ink on Paper: Japanese Monochromatic Prints (2009)",
-        type: "MCQ_EXH"  // Multiple Choice Exhibition
+        type: "MCQ"  // Multiple Choice Exhibition
       },
       {
         id:6,
@@ -65,7 +65,7 @@ const mockquizdata =
         title:"The Bedroom",
         options: ["Rembrandt", "Leonardo da Vinci", "Vincent van Gogh", "Pablo Picasso"],
         answer: "Vincent van Gogh",
-        type: "MCQ_EXH"
+        type: "MCQ"
       },
     {
       id:7,
@@ -91,7 +91,7 @@ const mockquizdata =
       title:"Rainy Day",
       options: ["London", "Paris", "Venice", "Vienna"],
       answer: "Paris",
-      type: "MCQ_EXH"
+      type: "MCQ"
     },
   ]
   

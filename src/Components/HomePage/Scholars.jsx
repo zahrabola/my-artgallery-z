@@ -16,7 +16,7 @@ import "../Publication/article.css"
 const Scholars = () => {
     return (
       <div className="scholars">
-          <h1>Scholars</h1>
+          <h1>scholar’s</h1>
           <hr />
        
         <div className="publications-grid">

@@ -43,21 +43,21 @@ const DigitalCat = () => {
       }
     
     
-      const randomDigitalCatalogs = datadigitalcat?.data?.slice(); 
-      if (randomDigitalCatalogs?.length > 0) {
-        randomDigitalCatalogs.sort(() => Math.random() - 0.5);
-        randomDigitalCatalogs.length = 2; 
+      const randomDigitalcatalogue = datadigitalcat?.data?.slice(); 
+      if (randomDigitalcatalogue?.length > 0) {
+        randomDigitalcatalogue.sort(() => Math.random() - 0.5);
+        randomDigitalcatalogue.length = 2; 
       }
     
     return (
 
            <div className="card">
-        <span>Digital Catalogs </span>
-        {randomDigitalCatalogs?.map((catalogs) => (
-          <div key={catalogs.id}>
+        <span>Digital Catalogue </span>
+        {randomDigitalcatalogue?.map((catalogue) => (
+          <div key={catalogue.id}>
               <div className="card-body">
-              <a href={catalogs.web_url}>
-                    <h5>{catalogs.title}</h5>
+              <a href={catalogue.web_url}>
+                    <h5>{catalogue.title}</h5>
                     </a>
                     </div>
               </div>

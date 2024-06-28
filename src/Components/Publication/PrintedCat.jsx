@@ -41,20 +41,20 @@ const PrintedCat = () => {
       }
     
     
-      const randomPrintedCatalogs = dataprintcat?.data?.slice(); 
-      if (randomPrintedCatalogs?.length > 0) {
-        randomPrintedCatalogs.sort(() => Math.random() - 0.5);
-        randomPrintedCatalogs.length = 2; 
+      const randomPrintedcatalogue = dataprintcat?.data?.slice(); 
+      if (randomPrintedcatalogue?.length > 0) {
+        randomPrintedcatalogue.sort(() => Math.random() - 0.5);
+        randomPrintedcatalogue.length = 2; 
       }
     
     return (
         <div className="card">
-        <span>Printed Catalogs </span>
-        {randomPrintedCatalogs?.map((catalogs) => (
-          <div key={catalogs.id}>
+        <span>Printed Catalogue </span>
+        {randomPrintedcatalogue?.map((catalogue) => (
+          <div key={catalogue.id}>
               <div className="card-body">
-              <a href={catalogs.web_url}>
-                    <h5>{catalogs.title}</h5>
+              <a href={catalogue.web_url}>
+                    <h5>{catalogue.title}</h5>
                     </a>
                     </div>
               </div>

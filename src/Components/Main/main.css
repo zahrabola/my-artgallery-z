@@ -48,7 +48,6 @@
     .results {
       column-count: 3;
     }
-  }
   
   @media (min-results: 1000px) {
     .results {
@@ -60,6 +59,7 @@
     .results {
       column-count: 5;
     }
+  }
   }
   
 

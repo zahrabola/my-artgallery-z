@@ -47,3 +47,15 @@
     opacity: 0.8; 
   }
   
+  @media (max-width: 768px) {
+    /* Styles for screens smaller than 768px */
+    .search-bar-input {
+      width: 100%;
+      margin: 5px 0;
+    }
+    .search-bar-submit {
+      width: 30px; /* Adjust width as needed */
+      height: 30px;
+      padding: 0;
+    }
+  }

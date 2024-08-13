@@ -11,7 +11,7 @@ const ArtworkDeatil = () => {
   const [artworkData, setArtworkData] = useState(null);
   const [error, setError] = useState(null);
 
-  const dummyImageUrl = `https://lh3.googleusercontent.com/ci/AL18g_QgKwWYiYGeRxuLUWjnR5tRizbeYNmwX3VMls2WSkleZDnDXWxCrk1Rj4zVkHty7RZpXTouOE8`;
+  const dummyImageUrl = `https://artic-web.imgix.net/95d79296-42be-46ac-a594-fa7964f18447/logo_forvideocloseup.allred.jpg?rect=0%2C0%2C7257%2C7257&auto=format%2Ccompress&q=80&fit=crop&crop=faces%2Ccenter&w=800&h=800`;
 
   const handleImgError = (event) => {
     event.target.src = dummyImageUrl;

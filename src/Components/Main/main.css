@@ -43,10 +43,18 @@
     text-decoration: none;
   }
   
+
+    
+  @media (max-width: 768px) {
+    .results {
+      column-count: 2;
+      margin-left: 20px;
+    }
+  }
   @media (min-width: 600px) {
   
     .results {
-      column-count: 3;
+      column-count: 2;
     }
   
   @media (min-results: 1000px) {
